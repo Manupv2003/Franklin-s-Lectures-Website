@@ -1,0 +1,503 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 14px 0;
+    margin-bottom: 26px;
+}
+
+.navbar {
+    color: #0f172a;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.logo-brand {
+    display: inline-flex;
+    align-items: center;
+}
+
+.brand-logo {
+    width: 110px;
+    height: auto;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: #000000;
+}
+
+.hero {
+    background: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    margin-bottom: 28px;
+    overflow: hidden;
+}
+
+.hero-banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.category-grid,
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.card,
+.detail-card {
+    background: #ffffff;
+    border: 1px solid #dbe3ef;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.category-card {
+    border-left: 5px solid #2563eb;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+}
+
+.category-card h3 {
+    font-size: 1.9rem;
+    margin: 0;
+}
+
+.card-link {
+    align-content: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(30, 64, 175, 0.12);
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.link {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.flash {
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+
+.flash.error {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+}
+
+.footer {
+    margin-top: 28px;
+    background: #1b1d38;
+    color: #ffffff;
+    padding: 64px 0 24px;
+}
+
+.footer-layout {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+}
+
+.footer-brand-col p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 4px;
+}
+
+.footer-logo {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin-bottom: 28px;
+}
+
+.footer-phone {
+    color: #f8ea3a;
+    font-weight: 700;
+    margin-top: 18px;
+}
+
+.footer-link-col h4 {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+}
+
+.footer-link-col a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    margin-bottom: 2px;
+}
+
+.footer-link-col a:hover {
+    color: #dbeafe;
+}
+
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 40px;
+}
+
+.after-cards-image-wrap {
+    margin-top: 6px;
+    margin-bottom: 22px;
+}
+
+.after-cards-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.video-section {
+    margin: 18px 0 26px;
+}
+
+.video-section iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+    display: block;
+}
+
+.semester-hero {
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    border-radius: 12px;
+    padding: 22px 18px;
+    margin-bottom: 22px;
+}
+
+.department-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.dept-card-link {
+    text-decoration: none;
+}
+
+.dept-card {
+    min-height: 130px;
+    border-radius: 12px;
+    border: 1px solid #dbeafe;
+    background: linear-gradient(135deg, #ffffff, #eef2ff);
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dept-card h3 {
+    color: #1e3a8a;
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+
+.dept-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(30, 64, 175, 0.14);
+}
+
+.scheme-switch {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.scheme-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    background: #e2e8f0;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.scheme-btn.active {
+    background: #facc15;
+    color: #1f2937;
+    font-weight: 700;
+}
+
+.semester-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.semester-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.semester-card {
+    min-height: 120px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.semester-card h2 {
+    margin: 0;
+    font-size: 2.2rem;
+    color: #0f172a;
+    letter-spacing: 0.03em;
+}
+
+.semester-card-disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.about-content-block {
+    margin-top: 10px;
+}
+
+.about-content-box {
+    background: #ffffff;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    padding: 18px;
+    line-height: 1.8;
+}
+
+.about-content-box p {
+    margin-bottom: 12px;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 460px;
+    padding: 10px 0 20px;
+}
+
+.login-panel {
+    width: min(430px, 100%);
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 26px 28px;
+}
+
+.login-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #0f172a;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 14px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #ffffff;
+}
+
+.password-wrap {
+    position: relative;
+}
+
+.eye-mark {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ef4444;
+    font-size: 1rem;
+}
+
+.login-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.remember-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.remember-box input {
+    width: 16px;
+    height: 16px;
+}
+
+.meta-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.98rem;
+}
+
+.login-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.login-btn {
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    min-width: 140px;
+    background: #5b4cf5;
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .login-panel {
+        padding: 18px;
+    }
+
+    .login-actions {
+        gap: 10px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer {
+        padding-top: 36px;
+    }
+
+    .footer-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}

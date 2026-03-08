@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Semesters - {{ department.name }}{% endblock %}
+
+{% block content %}
+<section class="semester-hero">
+    <h1>Semester</h1>
+    <p>{{ department.name }}</p>
+
+    <div class="scheme-switch">
+        <button class="scheme-btn active">2024 Scheme</button>
+        <button class="scheme-btn">2019 Scheme</button>
+    </div>
+</section>
+
+<section>
+    <div class="semester-grid">
+        {% for semester in semesters %}
+            {% if semester == "S1" %}
+                <a href="{{ url_for('courses') }}" class="semester-link">
+                    <article class="semester-card">
+                        <h2>{{ semester }}</h2>
+                    </article>
+                </a>
+            {% else %}
+                <article class="semester-card semester-card-disabled">
+                    <h2>{{ semester }}</h2>
+                </article>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

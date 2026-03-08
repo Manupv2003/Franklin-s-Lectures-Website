@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Franklin's Lectures{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar container">
+            <a href="{{ url_for('home') }}" class="brand logo-brand">
+                <img
+                    src="https://franklinslectures.in/wp-content/uploads/2024/07/Logo_Final%403x-8-1-1-3.png"
+                    alt="Franklin's Lectures"
+                    class="brand-logo"
+                >
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('departments') }}">Departments</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-layout">
+            <div class="footer-brand-col">
+                <img
+                    src="https://franklinslectures.in/wp-content/uploads/2024/07/Logo_Final%403x-8-1-1-3.png"
+                    alt="Franklin's Lectures"
+                    class="footer-logo"
+                >
+                <p>Franklin's Lectures,</p>
+                <p>2nd Floor Bridgeway Group,</p>
+                <p>West Hill, Kozhikode, Kerala, 673005</p>
+                <p class="footer-phone">Call @ 9074745741</p>
+            </div>
+
+            <div class="footer-link-col">
+                <h4>Quick Links</h4>
+                <a href="{{ url_for('about') }}">About Us</a>
+                <a href="#">Blog</a>
+            </div>
+
+            <div class="footer-link-col">
+                <h4>Resources</h4>
+                <a href="{{ url_for('courses') }}">Course list</a>
+                <a href="#">FAQ's</a>
+            </div>
+
+            <div class="footer-link-col">
+                <h4>Support</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Refund and Returns Policy</a>
+            </div>
+        </div>
+        <div class="container footer-divider"></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Departments - Franklin's Lectures{% endblock %}
+
+{% block content %}
+<section class="dept-hero">
+    <h1>Plan and Prepare for <span style="color: #2563eb;">your journey</span></h1>
+    <p>Select a B.Tech department to view semester-wise course access.</p>
+</section>
+
+<section>
+    <h2>KTU B.Tech Departments</h2>
+    <div class="department-grid">
+        {% for department in departments %}
+            <a
+                href="{{ url_for('department_semesters', department_slug=department.slug) }}"
+                class="dept-card-link"
+            >
+                <article class="dept-card">
+                    <h3>{{ department.name }}</h3>
+                </article>
+            </a>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

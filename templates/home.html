@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Franklin's Lectures{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <img
+        src="{{ url_for('static', filename='css/uploads/Screenshot 2026-03-08 085434.png') }}"
+        alt="Learn, Plan and Practice with Franklin's Lectures"
+        class="hero-banner-image"
+    >
+</section>
+
+<section>
+    <h2>Departments</h2>
+    <div class="category-grid">
+        <a href="{{ url_for('departments') }}" class="card category-card card-link">
+            <h3>B.Tech</h3>
+        </a>
+        <div class="card category-card">
+            <h3>KEAM</h3>
+        </div>
+        <div class="card category-card">
+            <h3>GATE</h3>
+        </div>
+        <div class="card category-card">
+            <h3>Technical PSC</h3>
+        </div>
+    </div>
+</section>
+
+<section class="after-cards-image-wrap">
+    <img
+        src="{{ url_for('static', filename='css/uploads/features.png') }}"
+        alt="Live class, lectures, notes and community"
+        class="after-cards-image"
+    >
+</section>
+
+<section class="video-section">
+    <iframe
+        src="https://www.youtube.com/embed/srPmG92oYQ8"
+        title="Franklin's Lectures video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+</section>
+
+
+{% endblock %}
